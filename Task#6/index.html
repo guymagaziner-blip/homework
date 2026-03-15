@@ -1,0 +1,29 @@
+﻿﻿
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <ul>
+        <li onclick="toggleRed(0)" class="object">אובייקט 1</li>
+        <li onclick="toggleRed(1)" class="object">אובייקט 2</li>
+        <li onclick="toggleRed(2)" class="object">אובייקט 3</li>
+        <li onclick="toggleRed(3)" class="object">אובייקט 4</li>
+    </ul>
+
+    <script>
+        function toggleRed(index) {
+            let items = document.querySelectorAll('.object');
+            items[index].classList.toggle('red');
+        }
+    </script>
+
+</body>
+</html>
