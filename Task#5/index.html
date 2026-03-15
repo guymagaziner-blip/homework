@@ -1,0 +1,79 @@
+﻿﻿
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <title>Tab Switcher</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .tabs {
+            display: inline-flex;
+            gap: 10px;
+        }
+
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ddd;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 16px;
+        }
+
+            .tab-btn:hover {
+                background-color: #bbb;
+            }
+
+            .tab-btn.active {
+                background-color: #3498db;
+                color: white;
+                font-weight: bold;
+            }
+
+        #display {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: white;
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            min-height: 60px;
+            max-width: 500px;
+            margin-inline: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>בחר כרטיסייה:</h2>
+    <div class="tabs">
+        <button class="tab-btn active" onclick="showTab(0)">טאב 1</button>
+        <button class="tab-btn" onclick="showTab(1)">טאב 2</button>
+        <button class="tab-btn" onclick="showTab(2)">טאב 3</button>
+    </div>
+
+    <div id="display">
+        <p class="text">hello</p>
+    </div>
+
+    <script>
+        function showTab(index) {
+            let tabTexts = ["תוכן טאב 1", "תוכן טאב 2", "תוכן טאב 3"];
+            let content = document.querySelector(".text");
+            content.textContent = tabTexts[index];
+        }
+    </script>
+
+</body>
+</html>
