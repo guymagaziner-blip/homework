@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Toggle Theme</title>
+    <style>
+        .light-theme {
+            background-color: white;
+            color: black;
+        }
+
+        .dark-theme {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body class="light-theme">
+    <p>This is a sample paragraph.</p>
+    <button onclick="toggleTheme()">Toggle Theme</button>
+
+    <script>
+        function toggleTheme() {
+            if (document.body.className === "light-theme") {
+                document.body.className = "dark-theme";
+            } else {
+                document.body.className = "light-theme";
+            }
+        }
+    </script>
+</body>
+</html>
